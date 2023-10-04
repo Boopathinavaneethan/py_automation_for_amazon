@@ -5,7 +5,7 @@ import os
 from selenium import webdriver
 
 
-featureFilePath = "../../feature/amazon_login.feature"
+featureFilePath = "../../feature/test_amazon_login.feature"
 
 @scenario(featureFilePath, "User logs in with valid credentials")
 def test_user_login_valid_creds():
@@ -16,7 +16,7 @@ def test_user_login_valid_creds():
 def test_user_login_invalid_creds():
     print("User logs in with Invalid credentials scenario is completed")
 
-@pytest.fixture
+"""@pytest.fixture
 def browser():
     # Get the current script's directory
     #script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -27,11 +27,11 @@ def browser():
     driver = webdriver.Chrome()
     yield driver
     #driver.quit()
-
+"""
 
 @given("User is on the Amazon.in login page")
-def open_amazon_login_page(browser, az_loginpage_obj):
-    az_loginpage_obj.az_login_page(browser)
+def open_amazon_login_page(driver, az_loginpage_obj):
+    az_loginpage_obj.az_login_page(driver)
     """ browser.get("https://www.amazon.in/")
     browser.find_element_by_id("nav-link-accountList-nav-line-1").click()"""
 

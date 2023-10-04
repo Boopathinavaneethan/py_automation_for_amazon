@@ -1,5 +1,6 @@
 Feature: Amazon.in Login
 
+  @test
   Scenario: User logs in with valid credentials
     Given User is on the Amazon.in login page
     When User enters valid username and password

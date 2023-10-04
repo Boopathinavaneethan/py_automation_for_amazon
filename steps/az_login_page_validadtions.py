@@ -1,9 +1,8 @@
 
-
 class amazon_login_validations():
     def __int__(self):
-        return None
+        self.num =100
 
-    def az_login_page(self, browser):
-        browser.get("https://www.amazon.in/")
+    def az_login_page(self, driver):
+        driver.get("https://www.amazon.in/")
         print("the code is now working")
